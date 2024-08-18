@@ -1,6 +1,6 @@
 <h1>Challenge - Creando el encriptador de texto</h1>
 
-<P>Vamos a realizar un a trabajar en ambiar mensajes secretos con otras personas que sepan el secreto de la encriptación utilizada. 
+<P>Vamos a realizar una aplicación que encripta textos, así podremos intercambiar mensajes secretos con otras personas que sepan el secreto de la encriptación utilizada. 
 
 Las "llaves" de encriptación que utilizaremos son las siguientes:
 
