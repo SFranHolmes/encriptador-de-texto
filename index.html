@@ -4,36 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador de Texto</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-    <body>
+<body>
+    <h1>Encriptador de Texto</h1>
+    <div class="contenedor">
+        <div class="input__area">
+            <label for="texto">Ingrese el texto:</label>
+            <textarea id="texto" rows="4" cols="50"></textarea>
+        </div>
 
-    
-        <h1>Encriptador de Texto</h1>
+        <br><br>
 
-    
-        <label for="texto">Ingrese el texto:</label>
-        <textarea id="texto" rows="4" cols="50"></textarea>
 
+        <div class="resultado__area">
+            <h2>Resultado:</h2>
+            <p id="resultado"></p>
+        </div>
+        <br><br>
+    </div>
     <br><br>
-
-    
+    <div>  
         <button id="encriptar">Encriptar</button>
 
-
         <button id="desencriptar">Desencriptar</button>
-
-    <br><br>
-
-    
-    <h2>Resultado:</h2>
-    <p id="resultado"></p>
-
-    <br><br>
-
-
+    </div> 
+        
     <footer>
         <p>Desarrollado por Francisco</p>
+   
     </footer>
+    <script src="app.js"></script>
 
 </body>
 </html>
