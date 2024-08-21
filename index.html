@@ -6,32 +6,48 @@
     <title>Encriptador de Texto</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="cuerpo">
+    <video autoplay muted loop id="bg__video" src="blue-code-rain.1920x1080.mp4" type="video/mp4"></video>
     <h1>Encriptador de Texto</h1>
     <div class="contenedor">
         <div class="input__area">
-            <label for="texto">Ingrese el texto:</label>
+            <label for="texto"><h2 id="label__text">Ingrese el texto aqui</h2></label>
             <textarea id="texto" rows="4" cols="50"></textarea>
+
         </div>
 
         <br><br>
 
 
         <div class="resultado__area">
-            <h2>Resultado:</h2>
+            <img src="Muñeco.png" alt="">
+            <div class="texto__temporal">
+            <h2 id="mensaje__por__defecto">Ningún texto fue encontrado</h2>
+            <br><br>
+            <p id="submensaje__por__defecto">Ingresa el texto que deseas encriptar o desencriptar</p>
             <p id="resultado"></p>
+            <button id="copiar" class="boton__copiar">Copiar</button>
+            </div>
         </div>
-        <br><br>
+      
     </div>
-    <br><br>
-    <div>  
-        <button id="encriptar">Encriptar</button>
-
-        <button id="desencriptar">Desencriptar</button>
+    
+    <div>
+        <p>Solo letras minúsculas y sin acentos</p>
+    </div>
+    <div class="boton__encriptar__desencriptar">  
+        <button id="encriptar" class="boton__encriptar">Encriptar</button>
+        <button id="desencriptar" class="boton__desencriptar">Desencriptar</button>
     </div> 
         
     <footer>
-        <p>Desarrollado por Francisco</p>
+        <p>Desarrollado por Francisco Cariño B.</p>
+
+        <div>
+            <a href="www.linkedin.com/in/francisco-carino-16b4612ba" target="_blank">
+                <img src="174857.png" alt="Linkedin" style="width: 50px; height: 50px;">
+            </a>
+        </div>
    
     </footer>
     <script src="app.js"></script>

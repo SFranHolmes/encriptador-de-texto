@@ -1,59 +1,184 @@
-/* Estilo general de la página */
-body {
-    font-family: Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    text-align: center;
-    padding: 20px;
+    box-sizing: border-box;
 }
-
-/* Título del sitio web */
+:root{
+    --fuente-principal: "Inter", sans-serif;
+}
 h1 {
-    color: #333;
-    margin-bottom: 20px;
+    color: white;
+    font-family: var(--fuente-principal);
+}
+.cuerpo {
+    height: auto;
+    margin: 0;
+}
+#bg__video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+.contenedor {
+    display: flex;
+    justify-content: space-between;
+    
+    gap: 10%;
+    align-items: flex-start;
+    padding: 20px;
+    height: auto;
+    text-align: center;
+    font-family: var(--fuente-principal);
+    
 }
 
-/* Campo de texto */
+
+.input__area {
+    width: 55%;
+    
+}
+
 textarea {
+    background-color: rgba(211, 211, 211, 0.7);
+    backdrop-filter: blur(5px);
+    font-family: var(--fuente-principal);
+   
+}
+
+textarea:focus {
+    outline: none;
+    border: 1px solid #888;
+    font-family: var(--fuente-principal);
+    
+}
+
+label {
+    font-weight: bold;
     width: 80%;
-    max-width: 600px;
+    color: white;
+    font-family: var(--fuente-principal);
+}
+
+input {
+    background-color: transparent;
+    border: none;
+}
+input::placeholder {
+    color: transparent;
+}
+textarea {
+    width: 100%;
+    height: 200px;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
     font-size: 16px;
 }
 
-/* Botones */
+.resultado__area {
+    width: 25%;
+    background-color: rgba(211, 211, 211, 0.7);
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    border: 2px solid #6c757d;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 500px;
+    font-family: var(--fuente-principal);
+}
+
+.oculto {
+    display: none;
+}
+
+img {
+    max-width: 100%;
+   
+    padding: 1%;
+    text-align: center;
+    height: 60%;
+    display: block;
+    margin-left: 0 auto;
+    width: 90%;
+    max-width: 100%;
+    margin-left: 17px;
+}
+.resultado__area h2 {
+    margin-top: 0;
+}
+
+.texto__temporal {
+    position: absolute;
+    align-items:flex-end;
+    bottom: 25px;
+    font-family: var(--fuente-principal);
+}
+
+.boton__encriptar__desencriptar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--fuente-principal);
+}
+
 button {
-    padding: 10px 20px;
-    margin: 10px;
-    border: none;
-    background-color: #007bff;
+    flex-direction: column;
+    width: 40%;
+    align-items: center;
     color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-    border-radius: 4px;
+    margin-right: 10px;
+    font-family: var(--fuente-principal);
 }
 
 button:hover {
-    background-color: #0056b3;
+
 }
 
-/* Área de resultado */
-#resultado {
-    font-weight: bold;
-    margin-top: 20px;
-    color: #333;
+.boton__encriptar {
+    background-color: rgba(3, 3, 169, 0.759);
+    font-family: var(--fuente-principal);
+    width: 200px;
+}
+.boton__desencriptar {
+    background-color: #d8dfe8ae;
+    width: 200px;
 }
 
-/* Estilo del rodapié */
+.boton__copiar {
+    display: none; /* Ocultar el botón inicialmente */
+    position: absolute; /* Posiciona el botón en relación al contenedor padre */
+    bottom: 10px; /* Ajusta la distancia desde la parte inferior del contenedor */
+    left: 100%; /* Posiciona el botón en el centro horizontal */
+    transform: translateX(-150%); /* Ajusta el botón para centrarlo horizontalmente */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    background-color: gray; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Quita el borde predeterminado del botón */
+    border-radius: 5px; /* Opcional: redondea las esquinas del botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    font-size: 16px; /* Tamaño del texto del botón */
+    width: 150px;
+    align-items: center;
+    font-family: var(--fuente-principal);
+}
+
 footer {
-    margin-top: 40px;
+    text-align: center;
+    margin-top: 20px;
     font-size: 14px;
-    color: #666;
+    color: #6c757d;
+    font-family: var(--fuente-principal);
 }
 
-footer p {
-    margin: 0;
-}
