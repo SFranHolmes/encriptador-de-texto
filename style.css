@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 * {
-    margin: 0;
+
     padding: 0;
     box-sizing: border-box;
 }
@@ -11,9 +11,11 @@ h1 {
     color: white;
     font-family: var(--fuente-principal);
 }
-.cuerpo {
+body {
     height: auto;
-    margin: 0;
+    margin: 1vh;
+    padding: 0;
+    box-sizing: border-box;
 }
 #bg__video {
     position: fixed;
@@ -26,14 +28,13 @@ h1 {
 .contenedor {
     display: flex;
     justify-content: space-between;
-    
     gap: 10%;
     align-items: flex-start;
     padding: 20px;
-    height: auto;
+    height: 100vh;
     text-align: center;
     font-family: var(--fuente-principal);
-    
+   
 }
 
 
@@ -115,14 +116,16 @@ img {
 }
 
 .texto__temporal {
-    position: absolute;
-    align-items:flex-end;
-    bottom: 25px;
+    
     font-family: var(--fuente-principal);
 }
 
+.requerimiento {
+    color: #888;
+}
+
 .boton__encriptar__desencriptar {
-    display: flex;
+    
     justify-content: center;
     align-items: center;
     font-family: var(--fuente-principal);
@@ -149,26 +152,27 @@ button:hover {
 .boton__encriptar {
     background-color: rgba(3, 3, 169, 0.759);
     font-family: var(--fuente-principal);
-    width: 200px;
+    width: 130px;
 }
 .boton__desencriptar {
     background-color: #d8dfe8ae;
-    width: 200px;
-}
+    width: 130px;
+    font-family: var(--fuente-principal);
+}    
 
 .boton__copiar {
-    display: none; /* Ocultar el botón inicialmente */
-    position: absolute; /* Posiciona el botón en relación al contenedor padre */
-    bottom: 10px; /* Ajusta la distancia desde la parte inferior del contenedor */
-    left: 100%; /* Posiciona el botón en el centro horizontal */
-    transform: translateX(-150%); /* Ajusta el botón para centrarlo horizontalmente */
-    padding: 10px 20px; /* Espaciado interno del botón */
-    background-color: gray; /* Color de fondo del botón */
-    color: white; /* Color del texto del botón */
-    border: none; /* Quita el borde predeterminado del botón */
-    border-radius: 5px; /* Opcional: redondea las esquinas del botón */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-    font-size: 16px; /* Tamaño del texto del botón */
+    display: none; 
+    position: absolute; 
+    bottom: 10px; 
+    left: 100%; 
+    transform: translateX(-140%); 
+    padding: 10px 20px; 
+    background-color: gray; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 16px; 
     width: 150px;
     align-items: center;
     font-family: var(--fuente-principal);
@@ -181,4 +185,3 @@ footer {
     color: #6c757d;
     font-family: var(--fuente-principal);
 }
-
