@@ -1,4 +1,3 @@
-// Variables para las letras y sus equivalencias encriptadas
 const letraE = "e";
 const letraI = "i";
 const letraA = "a";
@@ -11,7 +10,7 @@ const encriptacionA = "ai";
 const encriptacionO = "ober";
 const encriptacionU = "ufat";
 
-// Función para validar si el texto tiene solo letras minúsculas y sin acentos
+
 function validarTexto(texto) {
     const regex = /^[a-z\s]+$/;
     if (!regex.test(texto)) {
@@ -25,29 +24,26 @@ function validarTexto(texto) {
     return true;
 }
 
-// Función para encriptar el texto
+
 function encriptar(texto) {
-    let encriptado = texto
+    return texto
         .replaceAll(letraE, encriptacionE)
         .replaceAll(letraI, encriptacionI)
         .replaceAll(letraA, encriptacionA)
         .replaceAll(letraO, encriptacionO)
         .replaceAll(letraU, encriptacionU);
-    return encriptado;
 }
 
-// Función para desencriptar el texto
+
 function desencriptar(texto) {
-    let desencriptado = texto
-        .replaceAll(encriptacionE, letraE)
-        .replaceAll(encriptacionI, letraI)
-        .replaceAll(encriptacionA, letraA)
-        .replaceAll(encriptacionO, letraO)
-        .replaceAll(encriptacionU, letraU);
-    return desencriptado;
+    return texto
+        .replace(new RegExp(encriptacionU, 'g'), letraU)
+        .replace(new RegExp(encriptacionO, 'g'), letraO)
+        .replace(new RegExp(encriptacionA, 'g'), letraA)
+        .replace(new RegExp(encriptacionI, 'g'), letraI)
+        .replace(new RegExp(encriptacionE, 'g'), letraE);
 }
 
-// Función para manejar el clic en el botón de encriptar
 function manejarEncriptado() {
     const inputTexto = document.getElementById("texto").value;
     if (validarTexto(inputTexto)) {
@@ -56,7 +52,6 @@ function manejarEncriptado() {
     }
 }
 
-// Función para manejar el clic en el botón de desencriptar
 function manejarDesencriptado() {
     const inputTexto = document.getElementById("texto").value;
     if (validarTexto(inputTexto)) {
@@ -65,7 +60,6 @@ function manejarDesencriptado() {
     }
 }
 
-// Función para mostrar el resultado y ocultar elementos predeterminados
 function mostrarResultado(resultado) {
     document.getElementById("resultado").textContent = resultado;
     document.getElementById("mensaje__por__defecto").style.display = "none";
@@ -74,7 +68,6 @@ function mostrarResultado(resultado) {
     document.getElementById("copiar").style.display = "block";
 }
 
-// Función para copiar el texto al portapapeles
 function copiarTexto() {
     const resultadoTexto = document.getElementById("resultado").textContent;
     if (resultadoTexto) {
@@ -84,7 +77,6 @@ function copiarTexto() {
     }
 }
 
-// Event listeners para los botones
 document.getElementById("encriptar").addEventListener("click", manejarEncriptado);
 document.getElementById("desencriptar").addEventListener("click", manejarDesencriptado);
 document.getElementById("copiar").addEventListener("click", copiarTexto);
