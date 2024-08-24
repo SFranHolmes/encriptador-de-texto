@@ -145,9 +145,7 @@ button {
     font-family: var(--fuente-principal);
 }
 
-button:hover {
 
-}
 
 .boton__encriptar {
     background-color: rgba(3, 3, 169, 0.759);
