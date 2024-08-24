@@ -12,7 +12,7 @@ const encriptacionU = "ufat";
 
 
 function validarTexto(texto) {
-    const regex = /^[a-z\s]+$/;
+    const regex = /^[a-z\s!.,?]+$/;
     if (!regex.test(texto)) {
         if (/[A-Z]/.test(texto)) {
             alert("Solo letras minúsculas");
