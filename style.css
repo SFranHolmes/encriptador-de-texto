@@ -185,3 +185,53 @@ footer {
     color: #6c757d;
     font-family: var(--fuente-principal);
 }
+
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    
+}
+
+@media (max-width: 768px) {
+    .contenedor {
+        padding: 10px;
+    }
+
+    .input__area,
+    .resultado__area {
+        width: 100%;
+    }
+
+    textarea,
+    .resultado__area {
+        font-size: 12px;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .boton__encriptar,
+    .boton__desencriptar {
+        align-items: center;
+        width: 60%;
+        margin: 5px 0;
+        text-align: center;
+    }
+
+    .boton__copiar {
+        display: block;
+        position: static;
+        transform: none;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+    
+}
