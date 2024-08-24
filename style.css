@@ -195,6 +195,8 @@ footer {
 
 @media (max-width: 768px) {
     .contenedor {
+        display: flex;
+        flex-direction: column-reverse;
         padding: 10px;
     }
 
@@ -214,10 +216,12 @@ footer {
 
     .boton__encriptar,
     .boton__desencriptar {
+        display: flex;
         align-items: center;
         width: 60%;
         margin: 5px 0;
         text-align: center;
+        transform: translateX(40%);
     }
 
     .boton__copiar {
