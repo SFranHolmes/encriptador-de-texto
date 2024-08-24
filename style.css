@@ -194,8 +194,10 @@ footer {
 }
 
 @media (max-width: 768px) {
+    
     .contenedor {
         display: flex;
+        height: auto;
         flex-direction: column-reverse;
         padding: 10px;
     }
@@ -221,7 +223,7 @@ footer {
         width: 60%;
         margin: 5px 0;
         text-align: center;
-        transform: translateX(40%);
+        transform: translateX(35%);
     }
 
     .boton__copiar {
